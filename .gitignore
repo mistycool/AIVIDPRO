@@ -128,3 +128,19 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# Common Files
+.vscode/
+.DS_Store
+logs/
+*.log
+nohup.out
+
+# Ignore environment & secret files
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+config.json
+credentials.json
