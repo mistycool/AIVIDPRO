@@ -11,7 +11,7 @@ body {
 
 /* Sidebar Navigation */
 .sidebar {
-    width: 50px;
+    width: 250px;
     background: linear-gradient(to bottom, #0f0c29, #302b63); /* Gradient background */
     color: white;
     display: flex;
