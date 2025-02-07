@@ -26,3 +26,4 @@ function generateAITextVideo() {
         alert("Please enter a description.");
     }
 }
+
