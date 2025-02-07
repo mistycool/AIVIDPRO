@@ -1,0 +1,130 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background: linear-gradient(to right, #1e1e2f, #302b63, #0f0c29);
+    color: #fff;
+    min-height: 100vh; /* Ensure the page stretches fully */
+}
+
+/* Sidebar Navigation */
+.sidebar {
+    width: 250px;
+    background: linear-gradient(to bottom, #0f0c29, #302b63); /* Gradient background */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    border-right: 2px solid rgba(255, 255, 255, 0.2);
+    height: 100vh; /* Full viewport height */
+    position: fixed; /* Fix it on the right side */
+    left: 0; /* Sidebar on the right side of the page */
+}
+
+.sidebar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar .menu-item {
+    padding: 15px 20px;
+    font-size: 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    text-align: left;
+    transition: 0.3s;
+    color: #fff;
+}
+
+.sidebar .menu-item:hover {
+    background: #ff1493; /* Dark pink hover */
+    color: white;
+}
+
+/* Main Content */
+main {
+    margin-left: 250px; /* Adjust space for the sidebar */
+    padding: 20px;
+    flex: 1;
+    overflow-y: auto; /* Scrollable content */
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    position: sticky;
+    top: 0;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(135deg, #302b63, #0f0c29);
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    margin-top: 20px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.hero .btn {
+    background: #ff1493;
+    padding: 15px 20px;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.hero .btn:hover {
+    background: #ff0066;
+}
+
+/* Features Section */
+#features {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.feature-box {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    width: 90%;
+    max-width: 400px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    color: rgba(255, 255, 255, 0.8);
+    border-top: 2px solid rgba(255, 255, 255, 0.2);
+    position: sticky;
+    bottom: 0;
+}
