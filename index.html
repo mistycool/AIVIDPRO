@@ -4,77 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MistyCool AI Video Editor</title>
-    <link rel="stylesheet" href="style.css"> <!-- Link to external CSS -->
-    <script defer src="script.js"></script> <!-- Link to external JS -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
     <!-- Sidebar Navigation -->
     <aside class="sidebar">
-        <ul>
-            <li class="menu-item" onclick="showFeature('motion-detector')">&#x1F4F9; AI Motion Detector</li>
-            <li class="menu-item" onclick="showFeature('text-to-speech')">&#x1F4AC; AI Text-to-Speech Video</li>
-            <li class="menu-item" onclick="showFeature('ai-video')">&#x1F4FD; AI Video from Text</li>
-            <li class="menu-item" onclick="showFeature('cartoon-animation')">&#x1F4D8; AI Cartoon Animation</li>
-            <li class="menu-item" onclick="showFeature('language-option')">&#x1F310; Multi-Language</li>
+        <div class="logo-section">
+            <div class="logo">VideoCraft</div>
+            <button class="all-studios-btn">All Studios</button>
+        </div>
+        <ul class="menu-list">
+            <li class="menu-item active"><span class="icon">🏠</span> Home</li>
+            <li class="menu-item"><span class="icon">⚙️</span> Train Model</li>
+            <li class="menu-header">Tools</li>
+            <li class="menu-item"><span class="icon">🖼️</span> Image to Video</li>
+            <li class="menu-item"><span class="icon">✍️</span> Text to Video</li>
+            <li class="menu-header">Subscription & Billing</li>
+            <li class="menu-item"><span class="icon">💳</span> Manage Subscription</li>
+            <li class="menu-item"><span class="icon">📞</span> Customer Support</li>
         </ul>
     </aside>
 
     <!-- Main Content -->
     <main>
-        <header>
-            <div class="logo">MistyCool AI</div>
-            <div class="language-switcher">
-                <select id="language-select">
-                    <option value="en">English</option>
-                    <option value="fr">Français</option>
-                    <option value="es">Español</option>
-                    <option value="ru">Русский</option>
-                    <option value="sl">Slovenščina</option>
-                </select>
-            </div>
-        </header>
-
         <!-- Hero Section -->
         <section class="hero">
-            <h1>Describe Your Ideas and Generate</h1>
-            <p>Transform your ideas into stunning AI-generated videos. Leverage cutting-edge AI technology.</p>
-            <input type="text" placeholder="Write a prompt to generate" class="input-prompt">
-            <a href="#" class="btn">Generate</a>
-        </section>
-
-        <!-- Background Removal Feature Section -->
-        <section id="background-removal" class="feature-box">
-            <h3>AI Background Removal</h3>
-            <p>Upload an image or video, remove the background, and replace it with your desired background.</p>
-            <div>
-                <label for="uploadFile">Upload Image/Video:</label>
-                <input type="file" id="uploadFile" accept="image/*,video/*">
-            </div>
-            <div>
-                <label for="bgType">Choose New Background:</label>
-                <select id="bgType" onchange="toggleBackgroundOptions()">
-                    <option value="color">Solid Color</option>
-                    <option value="image">Image</option>
-                    <option value="video">Video</option>
-                </select>
-            </div>
-            <div id="bgOptions">
-                <input type="color" id="bgColor" value="#ffffff" class="bg-input">
-                <input type="file" id="bgImage" accept="image/*" class="bg-input">
-                <input type="file" id="bgVideo" accept="video/*" class="bg-input">
-            </div>
-            <button class="btn" onclick="processBackgroundRemoval()">Remove & Replace Background</button>
-            <div id="previewArea">
-                <h4>Preview:</h4>
-                <div id="previewOutput" class="preview-box">No preview available yet.</div>
+            <h1>Describe your ideas and generate</h1>
+            <p>Transform your words into visual masterpieces. Leverage AI technology to craft breathtaking videos.</p>
+            <div class="prompt-bar">
+                <input type="text" placeholder="Write a prompt to generate">
+                <button class="btn-generate">Generate</button>
             </div>
         </section>
 
-        <!-- Footer -->
-        <footer>
-            <p>© 2025 MistyCool AI. All Rights Reserved.</p>
-        </footer>
+        <!-- Video Generation Tools Section -->
+        <section class="tools-section">
+            <h2>Video generation tools</h2>
+            <div class="tool-card">
+                <img src="https://via.placeholder.com/400x200" alt="Text to Video">
+                <button class="tool-btn">Generate</button>
+            </div>
+            <div class="tool-card">
+                <img src="https://via.placeholder.com/400x200" alt="Image to Video">
+                <button class="tool-btn">Generate</button>
+            </div>
+        </section>
     </main>
 </body>
 </html>
