@@ -1,66 +1,125 @@
-/* Background Removal Feature */
-#background-removal {
-    background: #1e1e1e; /* Match the sidebar background */
-    padding: 20px;
-    margin: 20px auto;
-    border-radius: 8px;
-    width: 90%;
-    max-width: 600px;
-    color: white;
-    text-align: center;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MistyCool AI Video Editor</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+        <div class="logo-section">
+            <div class="logo">VideoCraft</div>
+            <button class="all-studios-btn">All Studios</button>
+        </div>
+        <ul class="menu-list">
+            <li class="menu-item active"><span class="icon">🏠</span> Home</li>
+            <li class="menu-item"><span class="icon">⚙️</span> Train Model <span class="waitlist">Waitlist</span></li>
+            <li class="menu-header">Tools</li>
+            <li class="menu-item" onclick="showFeature('background-removal')"><span class="icon">🖼️</span> Background Removal</li>
+            <li class="menu-item" onclick="showFeature('video-upscaling')"><span class="icon">🎥</span> Video Upscaling</li>
+            <li class="menu-item" onclick="showFeature('motion-tracking')"><span class="icon">🎯</span> Motion Tracking</li>
+            <li class="menu-item" onclick="showFeature('text-to-video')"><span class="icon">✍️</span> Text to Video</li>
+            <li class="menu-item" onclick="showFeature('text-to-speech')"><span class="icon">🔊</span> Text to Speech</li>
+            <li class="menu-item" onclick="showFeature('cartoon-filters')"><span class="icon">🎨</span> Cartoon & Anime Filters</li>
+            <li class="menu-item" onclick="showFeature('motion-detector')"><span class="icon">🤖</span> Motion Detector</li>
+            <li class="menu-item" onclick="showFeature('character-generation')"><span class="icon">👤</span> Character Generation</li>
+            <li class="menu-header">Subscription & Billing</li>
+            <li class="menu-item"><span class="icon">💳</span> Manage Subscription</li>
+            <li class="menu-item"><span class="icon">📞</span> Customer Support</li>
+        </ul>
+    </aside>
 
-.upload-section, .background-options {
-    margin: 10px 0;
-}
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>Describe your ideas and generate</h1>
+            <p>Transform your words into visual masterpieces. Leverage AI technology to craft breathtaking videos.</p>
+            <div class="prompt-bar">
+                <input type="text" placeholder="Write a prompt to generate">
+                <button class="btn-generate">Generate</button>
+            </div>
+        </section>
 
-.upload-section input[type="file"],
-.background-options select {
-    padding: 10px;
-    width: 100%;
-    max-width: 400px;
-    margin-top: 10px;
-}
+        <!-- Features Section -->
+        <section id="features">
+            <!-- Background Removal -->
+            <section id="background-removal" class="feature-box hidden">
+                <h2>AI Background Removal</h2>
+                <p>Automatically removes video backgrounds without a green screen.</p>
+                <input type="file" id="backgroundFile" accept="image/*,video/*">
+                <button class="btn-process" onclick="processBackgroundRemoval()">Process</button>
+                <div id="backgroundPreview" class="preview-box">Preview will appear here.</div>
+            </section>
 
-#bgOptions {
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-    margin: 10px 0;
-}
+            <!-- Video Upscaling -->
+            <section id="video-upscaling" class="feature-box hidden">
+                <h2>AI Video Upscaling</h2>
+                <p>Enhance video quality from low resolution to HD/4K.</p>
+                <input type="file" id="upscalingFile" accept="video/*">
+                <button class="btn-process" onclick="processVideoUpscaling()">Upscale</button>
+                <div id="upscalingPreview" class="preview-box">Preview will appear here.</div>
+            </section>
 
-.bg-input {
-    display: none;
-    padding: 10px;
-    width: 100%;
-    max-width: 200px;
-}
+            <!-- Motion Tracking -->
+            <section id="motion-tracking" class="feature-box hidden">
+                <h2>AI Motion Tracking</h2>
+                <p>Track object movements in videos and apply effects.</p>
+                <input type="file" id="motionTrackingFile" accept="video/*">
+                <button class="btn-process" onclick="processMotionTracking()">Track Motion</button>
+                <div id="motionTrackingPreview" class="preview-box">Preview will appear here.</div>
+            </section>
 
-.btn-process {
-    padding: 12px 20px;
-    background: #6f42c1;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: 0.3s;
-    margin-top: 10px;
-}
+            <!-- Text to Video -->
+            <section id="text-to-video" class="feature-box hidden">
+                <h2>AI Text-to-Video</h2>
+                <p>Generate short video clips from text input.</p>
+                <textarea id="textToVideoInput" placeholder="Enter your text here..."></textarea>
+                <button class="btn-process" onclick="generateTextToVideo()">Generate Video</button>
+                <div id="textToVideoPreview" class="preview-box">Preview will appear here.</div>
+            </section>
 
-.btn-process:hover {
-    background: #5a33a8;
-}
+            <!-- Text to Speech -->
+            <section id="text-to-speech" class="feature-box hidden">
+                <h2>AI Text-to-Speech (TTS)</h2>
+                <p>Convert text into realistic AI voiceovers.</p>
+                <textarea id="textToSpeechInput" placeholder="Enter your text here..."></textarea>
+                <button class="btn-process" onclick="generateTextToSpeech()">Generate Voiceover</button>
+                <audio id="textToSpeechPreview" controls hidden></audio>
+            </section>
 
-.preview-area {
-    margin-top: 20px;
-}
+            <!-- Cartoon Filters -->
+            <section id="cartoon-filters" class="feature-box hidden">
+                <h2>AI Cartoon & Anime Filters</h2>
+                <p>Apply cartoon, anime, or artistic styles to your videos.</p>
+                <input type="file" id="cartoonFilterFile" accept="video/*">
+                <button class="btn-process" onclick="applyCartoonFilter()">Apply Filter</button>
+                <div id="cartoonFilterPreview" class="preview-box">Preview will appear here.</div>
+            </section>
 
-.preview-box {
-    border: 1px solid #ccc;
-    padding: 20px;
-    min-height: 200px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 4px;
-    color: #fff;
-}
+            <!-- Motion Detector -->
+            <section id="motion-detector" class="feature-box hidden">
+                <h2>AI Motion Detector & Character Simulation</h2>
+                <p>Apply your movements to a cartoon or AI-generated character.</p>
+                <input type="file" id="motionDetectorFile" accept="video/*">
+                <button class="btn-process" onclick="simulateMotion()">Simulate</button>
+                <div id="motionDetectorPreview" class="preview-box">Preview will appear here.</div>
+            </section>
+
+            <!-- Character Generation -->
+            <section id="character-generation" class="feature-box hidden">
+                <h2>AI Character Generation</h2>
+                <p>Upload photos and describe actions to create realistic animations.</p>
+                <input type="file" id="characterFile" accept="image/*">
+                <textarea id="characterAction" placeholder="Describe the action (e.g., 'fighting a lion')"></textarea>
+                <button class="btn-process" onclick="generateCharacter()">Generate Character</button>
+                <div id="characterPreview" class="preview-box">Preview will appear here.</div>
+            </section>
+        </section>
+    </main>
+</body>
+</html>
