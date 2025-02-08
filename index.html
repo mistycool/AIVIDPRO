@@ -1,56 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MistyCool AI Video Editor</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
-</head>
-<body>
-    <!-- Sidebar Navigation -->
-    <aside class="sidebar">
-        <div class="logo-section">
-            <div class="logo">VideoCraft</div>
-            <button class="all-studios-btn">All Studios</button>
-        </div>
-        <ul class="menu-list">
-            <li class="menu-item active"><span class="icon">🏠</span> Home</li>
-            <li class="menu-item"><span class="icon">⚙️</span> Train Model <span class="waitlist">Waitlist</span></li>
-            <li class="menu-header">Tools</li>
-            <li class="menu-item"><span class="icon">🖼️</span> Image to Video</li>
-            <li class="menu-item"><span class="icon">✍️</span> Text to Video</li>
-            <li class="menu-header">Subscription & Billing</li>
-            <li class="menu-item"><span class="icon">💳</span> Manage Subscription</li>
-            <li class="menu-item"><span class="icon">📞</span> Customer Support</li>
-        </ul>
-    </aside>
-
-    <!-- Main Content -->
-    <main>
-        <!-- Hero Section -->
-        <section class="hero">
-            <h1>Describe your ideas and generate</h1>
-            <p>Transform your words into visual masterpieces. Leverage AI technology to craft breathtaking videos.</p>
-            <div class="prompt-bar">
-                <input type="text" placeholder="Write a prompt to generate">
-                <button class="btn-generate">Generate</button>
-            </div>
-        </section>
-
-        <!-- Video Generation Tools Section -->
-        <section class="tools-section">
-            <h2>Video generation tools</h2>
-            <div class="tool-card">
-                <img src="https://via.placeholder.com/400x200" alt="Text to Video">
-                <button class="tool-btn">Generate</button>
-            </div>
-            <div class="tool-card">
-                <img src="https://via.placeholder.com/400x200" alt="Image to Video">
-                <button class="tool-btn">Generate</button>
-            </div>
-        </section>
-    </main>
-</body>
-</html>
+<!-- Background Removal Feature Section -->
+<section id="background-removal" class="feature-box">
+    <h2>AI Background Removal</h2>
+    <p>Upload an image or video, remove the background, and optionally replace it with a new background.</p>
+    <div class="upload-section">
+        <label for="uploadFile">Upload Image/Video:</label>
+        <input type="file" id="uploadFile" accept="image/*,video/*">
+    </div>
+    <div class="background-options">
+        <label for="bgType">Choose New Background:</label>
+        <select id="bgType" onchange="toggleBackgroundOptions()">
+            <option value="none">No Background</option>
+            <option value="color">Solid Color</option>
+            <option value="image">Image</option>
+            <option value="video">Video</option>
+        </select>
+    </div>
+    <div id="bgOptions" class="bg-options">
+        <input type="color" id="bgColor" value="#ffffff" class="bg-input">
+        <input type="file" id="bgImage" accept="image/*" class="bg-input">
+        <input type="file" id="bgVideo" accept="video/*" class="bg-input">
+    </div>
+    <button class="btn-process" onclick="processBackgroundRemoval()">Remove & Replace Background</button>
+    <div id="previewArea" class="preview-area">
+        <h3>Preview:</h3>
+        <div id="previewOutput" class="preview-box">No preview available yet.</div>
+    </div>
+</section>
