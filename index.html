@@ -39,7 +39,7 @@
         <section class="hero">
             <h1>Describe Your Ideas and Generate</h1>
             <p>Transform your ideas into stunning AI-generated videos. Leverage cutting-edge AI technology.</p>
-            <input type="text" placeholder="Write a prompt to generate" style="width: 60%; padding: 10px; border-radius: 4px;">
+            <input type="text" placeholder="Write a prompt to generate" class="input-prompt">
             <a href="#" class="btn">Generate</a>
         </section>
 
@@ -60,14 +60,14 @@
                 </select>
             </div>
             <div id="bgOptions">
-                <input type="color" id="bgColor" value="#ffffff" style="display: block;">
-                <input type="file" id="bgImage" accept="image/*" style="display: none;">
-                <input type="file" id="bgVideo" accept="video/*" style="display: none;">
+                <input type="color" id="bgColor" value="#ffffff" class="bg-input">
+                <input type="file" id="bgImage" accept="image/*" class="bg-input">
+                <input type="file" id="bgVideo" accept="video/*" class="bg-input">
             </div>
             <button class="btn" onclick="processBackgroundRemoval()">Remove & Replace Background</button>
-            <div id="previewArea" style="margin-top: 20px;">
+            <div id="previewArea">
                 <h4>Preview:</h4>
-                <div id="previewOutput" style="border: 1px solid #ccc; padding: 10px; min-height: 200px;">No preview available yet.</div>
+                <div id="previewOutput" class="preview-box">No preview available yet.</div>
             </div>
         </section>
 
