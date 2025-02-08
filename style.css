@@ -4,15 +4,14 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    background: #551a3b; /* Darker rose background */
+    background: #6e2a4a;
     color: #fff;
     min-height: 100vh;
 }
 
-/* Sidebar Navigation */
 .sidebar {
     width: 260px;
-    background: #6e2a4a; /* Darker rose shade for sidebar */
+    background: #501d3b;
     color: white;
     display: flex;
     flex-direction: column;
@@ -20,7 +19,6 @@ body {
     border-right: 1px solid rgba(255, 255, 255, 0.1);
     height: 100vh;
     position: fixed;
-    left: 0;
 }
 
 .sidebar ul {
@@ -31,57 +29,50 @@ body {
 .sidebar .menu-item {
     display: flex;
     align-items: center;
-    gap: 10px;
     padding: 15px 20px;
     font-size: 16px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     cursor: pointer;
-    text-align: left;
-    transition: 0.3s;
     color: #b0b0b0;
+    transition: 0.3s;
 }
 
 .sidebar .menu-item:hover {
-    background: #823154; /* Hover color for sidebar */
+    background: #823154;
     color: #fff;
 }
 
-/* Hero Section */
+main {
+    margin-left: 260px;
+    padding: 20px;
+    flex: 1;
+    overflow-y: auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #501d3b;
+    padding: 20px;
+}
+
 .hero {
     text-align: center;
     padding: 80px 20px;
-    background: linear-gradient(135deg, #823154, #551a3b); /* Gradient in rose tones */
-    border-radius: 8px;
+    background: linear-gradient(135deg, #823154, #6e2a4a);
+    border-radius: 10px;
     margin: 20px 0;
 }
 
-.hero h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
-}
-
-.hero p {
-    font-size: 18px;
-    margin-bottom: 30px;
-    color: rgba(255, 255, 255, 0.8);
-}
-
-.hero .btn {
-    background: #a83e66; /* Rose accent */
-    padding: 15px 25px;
+.input-prompt {
+    width: 60%;
+    padding: 10px;
     border-radius: 5px;
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    transition: 0.3s;
+    margin: 10px 0;
 }
 
-.hero .btn:hover {
-    background: #c14d77; /* Lighter rose hover */
-}
-
-/* Background Removal Feature */
-#background-removal {
+.feature-box {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     padding: 20px;
@@ -89,28 +80,23 @@ body {
     border-radius: 10px;
     width: 90%;
     max-width: 600px;
-    text-align: center;
 }
 
-#background-removal input[type="file"],
-#background-removal select,
-#background-removal input[type="color"] {
-    margin: 10px 0;
-    padding: 10px;
-    width: 100%;
-    max-width: 400px;
-}
-
-#background-removal .btn {
-    margin-top: 10px;
-    background: #6200ea;
+.btn {
+    background: #a83e66;
     color: white;
     padding: 10px 20px;
     border-radius: 5px;
-    cursor: pointer;
+    text-decoration: none;
+    transition: 0.3s;
     border: none;
 }
 
-#background-removal .btn:hover {
-    background: #3700b3;
+.preview-box {
+    border: 1px solid #ccc;
+    padding: 10px;
+    min-height: 200px;
+    background: #ffffff1a;
+    border-radius: 5px;
+    color: white;
 }
