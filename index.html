@@ -4,23 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MistyCool AI Video Editor</title>
-    <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="style.css"> <!-- Link to external CSS -->
+    <script defer src="script.js"></script> <!-- Link to external JS -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
-    <!-- Sidebar Navigation -->
     <aside class="sidebar">
         <ul>
-            <li class="menu-item" onclick="showFeature('motion-detector')">AI Motion Detector</li>
-            <li class="menu-item" onclick="showFeature('text-to-speech')">AI Text-to-Speech Video</li>
-            <li class="menu-item" onclick="showFeature('ai-video')">AI Video from Text</li>
-            <li class="menu-item" onclick="showFeature('cartoon-animation')">AI Cartoon Animation</li>
-            <li class="menu-item" onclick="showFeature('language-option')">Multi-Language</li>
+            <li class="menu-item" onclick="showFeature('motion-detector')">&#x1F4F9; AI Motion Detector</li>
+            <li class="menu-item" onclick="showFeature('text-to-speech')">&#x1F4AC; AI Text-to-Speech Video</li>
+            <li class="menu-item" onclick="showFeature('ai-video')">&#x1F4FD; AI Video from Text</li>
+            <li class="menu-item" onclick="showFeature('cartoon-animation')">&#x1F4D8; AI Cartoon Animation</li>
+            <li class="menu-item" onclick="showFeature('language-option')">&#x1F310; Multi-Language</li>
         </ul>
     </aside>
-
-    <!-- Main Content -->
     <main>
         <header>
             <div class="logo">MistyCool AI</div>
@@ -34,36 +31,15 @@
                 </select>
             </div>
         </header>
-
-        <!-- Hero Section -->
         <section class="hero">
-            <h1>Transform Your Videos with AI</h1>
-            <p>Upload videos, convert to cartoons, use AI TTS, or generate AI-created videos from text.</p>
-            <a href="#" class="btn">Get Started</a>
+            <h1>Describe Your Ideas and Generate</h1>
+            <p>Transform your ideas into stunning AI-generated videos. Leverage cutting-edge AI technology.</p>
+            <input type="text" placeholder="Write a prompt to generate" style="width: 60%; padding: 10px; border-radius: 4px;">
+            <a href="#" class="btn">Generate</a>
         </section>
-
-        <!-- Features Section -->
-        <section id="features">
-            <div id="motion-detector" class="feature-box">
-                <h3>AI Motion Detector</h3>
-                <p>Upload a video and convert it into a 3D/cartoon character that mimics your actions.</p>
-                <input type="file" id="motionUpload">
-                <button class="btn" onclick="processMotionVideo()">Process Video</button>
-            </div>
-
-            <div id="text-to-speech" class="feature-box">
-                <h3>AI Text-to-Speech Video</h3>
-                <p>Convert text into a video with AI-generated voice.</p>
-                <textarea id="ttsInput" placeholder="Type text for AI voice..."></textarea>
-                <button class="btn" onclick="generateTTSVideo()">Generate</button>
-            </div>
-        </section>
-
-        <!-- Footer -->
         <footer>
             <p>© 2025 MistyCool AI. All Rights Reserved.</p>
         </footer>
     </main>
-
 </body>
 </html>
