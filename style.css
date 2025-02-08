@@ -4,14 +4,14 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    background: #141414; /* Black background */
+    background: #0f0f0f; /* Black background */
     color: #fff;
 }
 
 /* Sidebar Navigation */
 .sidebar {
     width: 260px;
-    background: #0f0f0f; /* Sidebar dark black */
+    background: #141414; /* Sidebar dark black */
     color: white;
     display: flex;
     flex-direction: column;
@@ -23,13 +23,20 @@ body {
 
 /* Hero Section */
 .hero {
-    text-align: center;
-    background: linear-gradient(135deg, #1e1e2f, #302b63);
+    background: linear-gradient(135deg, #1e1e2f, #302b63); /* Overlay with gradient */
     border-radius: 8px;
+    margin: 20px;
     padding: 40px;
+    text-align: center;
     color: white;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-    margin-top: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+.hero-overlay {
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent overlay */
+    padding: 20px;
+    border-radius: 8px;
 }
 
 .hero-title {
@@ -46,6 +53,7 @@ body {
     display: flex;
     justify-content: center;
     gap: 10px;
+    margin-top: 20px;
 }
 
 .prompt-bar input {
