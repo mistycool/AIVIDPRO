@@ -8,91 +8,68 @@
     <script defer src="script.js"></script>
 </head>
 <body>
-    <!-- Sidebar -->
-    <aside class="sidebar">
-        <div class="logo">VideoCraft <span class="all-studios">All Studios</span></div>
+    <div class="sidebar">
+        <div class="logo">VideoCraft</div>
         <ul>
-            <li class="menu-item active" onclick="navigateTo('home')">🏠 Home</li>
-            <li class="menu-item" onclick="navigateTo('background-removal')">🖼️ Background Removal</li>
-            <li class="menu-item" onclick="navigateTo('video-upscaling')">📈 Video Upscaling</li>
-            <li class="menu-item" onclick="navigateTo('motion-tracking')">🎯 Motion Tracking</li>
-            <li class="menu-item" onclick="navigateTo('text-to-video')">✏️ Text to Video</li>
-            <li class="menu-item" onclick="navigateTo('text-to-speech')">🎙️ Text to Speech Video</li>
-            <li class="menu-item" onclick="navigateTo('cartoon-anime')">🎨 Cartoon & Anime Filters</li>
-            <li class="menu-item" onclick="navigateTo('motion-detector')">📹 Motion Detector</li>
-            <li class="menu-item" onclick="navigateTo('character-generation')">👤 Character Generation</li>
+            <li class="menu-item" onclick="showPage('home')">Home</li>
+            <li class="menu-item" onclick="showPage('background-removal')">Background Removal</li>
+            <li class="menu-item" onclick="showPage('video-upscaling')">Video Upscaling</li>
+            <li class="menu-item" onclick="showPage('motion-tracking')">Motion Tracking</li>
+            <li class="menu-item" onclick="showPage('text-to-video')">Text to Video</li>
+            <li class="menu-item" onclick="showPage('text-to-speech')">Text to Speech Video</li>
+            <li class="menu-item" onclick="showPage('cartoon-filters')">Cartoon & Anime Filters</li>
+            <li class="menu-item" onclick="showPage('motion-detector')">Motion Detector</li>
+            <li class="menu-item" onclick="showPage('character-generation')">Character Generation</li>
+            <li class="menu-item" onclick="showPage('manage-subscription')">Manage Subscription</li>
+            <li class="menu-item" onclick="showPage('customer-support')">Customer Support</li>
         </ul>
-        <ul class="subscription">
-            <li class="menu-item" onclick="navigateTo('manage-subscription')">📋 Manage Subscription</li>
-            <li class="menu-item" onclick="navigateTo('customer-support')">📞 Customer Support</li>
-        </ul>
-    </aside>
+    </div>
 
-    <!-- Main Content -->
     <main>
-        <header>
-            <div class="language-switcher">
-                <select id="language-select">
-                    <option value="en">English</option>
-                    <option value="fr">Français</option>
-                    <option value="es">Español</option>
-                </select>
-                <a href="#" class="btn-auth">Log In</a>
-                <a href="#" class="btn-auth">Sign Up</a>
-            </div>
-        </header>
-
-        <!-- Home Page -->
-        <section id="home" class="page active">
-            <h1>Describe Your Ideas and Generate</h1>
-            <input type="text" placeholder="Write a prompt to generate" class="input-prompt">
-            <button class="btn-generate">Generate</button>
-            <div class="tools">
-                <div class="tool-card">Text to Video</div>
-                <div class="tool-card">Image to Video</div>
-            </div>
-        </section>
-
-        <!-- Background Removal Page -->
-        <section id="background-removal" class="page">
-            <h2>Background Removal Page</h2>
-            <input type="file" id="upload-file">
-            <select id="background-options">
-                <option value="transparent">Transparent</option>
-                <option value="image">Image</option>
-                <option value="video">Video</option>
-            </select>
-            <button class="btn-action">Remove Background</button>
-        </section>
-
-        <!-- Placeholder for Other Pages -->
-        <section id="video-upscaling" class="page">
-            <h2>Video Upscaling Page</h2>
-        </section>
-        <section id="motion-tracking" class="page">
-            <h2>Motion Tracking Page</h2>
-        </section>
-        <section id="text-to-video" class="page">
-            <h2>Text to Video Page</h2>
-        </section>
-        <section id="text-to-speech" class="page">
-            <h2>Text to Speech Video Page</h2>
-        </section>
-        <section id="cartoon-anime" class="page">
-            <h2>Cartoon & Anime Filters Page</h2>
-        </section>
-        <section id="motion-detector" class="page">
-            <h2>Motion Detector Page</h2>
-        </section>
-        <section id="character-generation" class="page">
-            <h2>Character Generation Page</h2>
-        </section>
-        <section id="manage-subscription" class="page">
-            <h2>Manage Subscription Page</h2>
-        </section>
-        <section id="customer-support" class="page">
-            <h2>Customer Support Page</h2>
-        </section>
+        <div id="home" class="page active">
+            <h1>Welcome to MistyCool AI Video Editor</h1>
+            <p>Explore cutting-edge AI tools to transform your videos.</p>
+        </div>
+        <div id="background-removal" class="page">
+            <h1>Background Removal Page</h1>
+            <p>Upload your image or video to remove the background.</p>
+        </div>
+        <div id="video-upscaling" class="page">
+            <h1>Video Upscaling Page</h1>
+            <p>Enhance your videos to HD or 4K quality.</p>
+        </div>
+        <div id="motion-tracking" class="page">
+            <h1>Motion Tracking Page</h1>
+            <p>Track object movements in your videos.</p>
+        </div>
+        <div id="text-to-video" class="page">
+            <h1>Text to Video Page</h1>
+            <p>Create videos from text descriptions.</p>
+        </div>
+        <div id="text-to-speech" class="page">
+            <h1>Text to Speech Video Page</h1>
+            <p>Convert text to speech with AI.</p>
+        </div>
+        <div id="cartoon-filters" class="page">
+            <h1>Cartoon & Anime Filters Page</h1>
+            <p>Apply cartoon and anime filters to your videos.</p>
+        </div>
+        <div id="motion-detector" class="page">
+            <h1>Motion Detector Page</h1>
+            <p>Detect and simulate motion in your videos.</p>
+        </div>
+        <div id="character-generation" class="page">
+            <h1>Character Generation Page</h1>
+            <p>Generate animated characters from your photos.</p>
+        </div>
+        <div id="manage-subscription" class="page">
+            <h1>Manage Subscription Page</h1>
+            <p>Manage your subscription details.</p>
+        </div>
+        <div id="customer-support" class="page">
+            <h1>Customer Support Page</h1>
+            <p>Contact customer support for assistance.</p>
+        </div>
     </main>
 </body>
 </html>
