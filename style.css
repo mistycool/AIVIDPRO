@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    background: #141414; /* Dark background */
+    background: #2e1e2f; /* Dark rose background */
     color: #fff;
 }
 
@@ -79,15 +79,6 @@ body {
     margin-top: 20px;
 }
 
-.waitlist {
-    background: #6f42c1;
-    color: white;
-    border-radius: 4px;
-    padding: 4px 8px;
-    font-size: 12px;
-    margin-left: auto;
-}
-
 /* Main Content */
 main {
     margin-left: 260px; /* Matches sidebar width */
@@ -95,50 +86,41 @@ main {
     flex: 1;
 }
 
-/* Hero Section */
-.hero {
-    text-align: center;
-    background: linear-gradient(135deg, #1e1e2f, #302b63);
-    border-radius: 8px;
-    padding: 40px;
-    color: white;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-}
-
-.hero h1 {
-    font-size: 36px;
-    margin-bottom: 10px;
-}
-
-.hero p {
-    font-size: 18px;
-    margin-bottom: 20px;
-}
-
-.prompt-bar {
+/* Header */
+.header {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    background: #1a1a1a;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.language-switcher select {
+    padding: 5px 10px;
+    background: #2c2c2c;
+    border: 1px solid #3a3a3a;
+    color: #fff;
+    border-radius: 4px;
+}
+
+.auth-links {
+    display: flex;
     gap: 10px;
 }
 
-.prompt-bar input {
-    width: 60%;
-    padding: 12px;
-    border-radius: 4px;
-    border: none;
-}
-
-.prompt-bar .btn-generate {
-    padding: 12px 24px;
+.btn-auth {
+    color: #fff;
     background: #6f42c1;
-    color: white;
-    border: none;
+    padding: 5px 15px;
     border-radius: 4px;
-    cursor: pointer;
-    transition: 0.3s;
+    text-decoration: none;
+    font-size: 14px;
 }
 
-.prompt-bar .btn-generate:hover {
+.btn-auth:hover {
     background: #5a33a8;
 }
 
@@ -198,4 +180,3 @@ input::placeholder {
     color: #fff;
     margin-top: 20px;
 }
-
