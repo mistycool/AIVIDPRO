@@ -1,50 +1,62 @@
-/* General Styles */
+/* General Styling */
 body {
-    font-family: 'Inter', sans-serif;
     margin: 0;
     padding: 0;
     display: flex;
-    background: #0f0f0f; /* Black background */
+    font-family: Arial, sans-serif;
+    background: #0f0c29; /* Background gradient */
     color: #fff;
 }
 
-/* Sidebar */
+/* Sidebar Styling */
 .sidebar {
     width: 260px;
-    background: #181818;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    padding: 20px;
+    background: #1e1e2f;
+    color: #fff;
     position: fixed;
+    top: 0;
+    bottom: 0;
     left: 0;
+    padding-top: 20px;
+    overflow-y: auto;
+    z-index: 1000;
 }
 
-.menu-item {
-    padding: 12px 15px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    border-radius: 8px;
-    color: #b0b0b0;
+.sidebar .logo {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar .menu-item {
+    padding: 15px 20px;
     cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.menu-item.active {
-    background: #302b63;
-    color: white;
+.sidebar .menu-item:hover {
+    background: #6a1b9a;
+    color: #fff;
 }
 
 /* Main Content Styling */
+main {
+    margin-left: 260px;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+/* Pages Styling */
 .page {
     display: none;
-    padding: 20px;
-    margin-left: 260px;
-    margin-top: 20px;
-    background: #1e1e2f;
-    color: white;
-    border-radius: 10px;
 }
 
 .page.active {
@@ -52,9 +64,24 @@ body {
 }
 
 /* Hero Section */
-.hero {
-    background: linear-gradient(135deg, #1e1e2f, #302b63);
-    padding: 40px;
-    border-radius: 10px;
+#home {
     text-align: center;
+    background: linear-gradient(135deg, #302b63, #0f0c29);
+    padding: 50px;
+    border-radius: 10px;
+}
+
+/* Buttons */
+button, .menu-item {
+    background: #6a1b9a;
+    border: none;
+    padding: 10px 20px;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover, .menu-item:hover {
+    background: #4a148c;
 }
