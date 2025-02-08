@@ -16,109 +16,62 @@
             <button class="all-studios-btn">All Studios</button>
         </div>
         <ul class="menu-list">
-            <li class="menu-item active"><span class="icon">🏠</span> Home</li>
-            <li class="menu-item"><span class="icon">⚙️</span> Train Model <span class="waitlist">Waitlist</span></li>
+            <li class="menu-item active" onclick="showFeature('home')"><span class="icon">🏠</span> Home</li>
+            <li class="menu-item" onclick="showFeature('train-model')"><span class="icon">⚙️</span> Train Model <span class="waitlist">Waitlist</span></li>
             <li class="menu-header">Tools</li>
             <li class="menu-item" onclick="showFeature('background-removal')"><span class="icon">🖼️</span> Background Removal</li>
             <li class="menu-item" onclick="showFeature('video-upscaling')"><span class="icon">🎥</span> Video Upscaling</li>
             <li class="menu-item" onclick="showFeature('motion-tracking')"><span class="icon">🎯</span> Motion Tracking</li>
             <li class="menu-item" onclick="showFeature('text-to-video')"><span class="icon">✍️</span> Text to Video</li>
-            <li class="menu-item" onclick="showFeature('text-to-speech')"><span class="icon">🔊</span> Text to Speech</li>
+            <li class="menu-item" onclick="showFeature('text-to-speech-video')"><span class="icon">🔊</span> Text to Speech Video</li>
             <li class="menu-item" onclick="showFeature('cartoon-filters')"><span class="icon">🎨</span> Cartoon & Anime Filters</li>
             <li class="menu-item" onclick="showFeature('motion-detector')"><span class="icon">🤖</span> Motion Detector</li>
             <li class="menu-item" onclick="showFeature('character-generation')"><span class="icon">👤</span> Character Generation</li>
             <li class="menu-header">Subscription & Billing</li>
-            <li class="menu-item"><span class="icon">💳</span> Manage Subscription</li>
-            <li class="menu-item"><span class="icon">📞</span> Customer Support</li>
+            <li class="menu-item" onclick="showFeature('subscription')"><span class="icon">💳</span> Manage Subscription</li>
+            <li class="menu-item" onclick="showFeature('support')"><span class="icon">📞</span> Customer Support</li>
         </ul>
     </aside>
 
     <!-- Main Content -->
     <main>
         <!-- Hero Section -->
-        <section class="hero">
-            <h1>Describe your ideas and generate</h1>
-            <p>Transform your words into visual masterpieces. Leverage AI technology to craft breathtaking videos.</p>
-            <div class="prompt-bar">
-                <input type="text" placeholder="Write a prompt to generate">
-                <button class="btn-generate">Generate</button>
-            </div>
+        <section id="home" class="feature-box">
+            <h1>Welcome to MistyCool AI Video Editor</h1>
+            <p>Explore cutting-edge AI tools to transform your videos.</p>
         </section>
 
-        <!-- Features Section -->
-        <section id="features">
-            <!-- Background Removal -->
-            <section id="background-removal" class="feature-box hidden">
-                <h2>AI Background Removal</h2>
-                <p>Automatically removes video backgrounds without a green screen.</p>
-                <input type="file" id="backgroundFile" accept="image/*,video/*">
-                <button class="btn-process" onclick="processBackgroundRemoval()">Process</button>
-                <div id="backgroundPreview" class="preview-box">Preview will appear here.</div>
-            </section>
+        <!-- Background Removal -->
+        <section id="background-removal" class="feature-box hidden">
+            <h2>AI Background Removal</h2>
+            <p>Remove the background of images or videos.</p>
+            <input type="file" id="backgroundFile" accept="image/*,video/*">
+            <button class="btn-process" onclick="processBackgroundRemoval()">Process</button>
+            <div id="backgroundPreview" class="preview-box">Preview will appear here.</div>
+        </section>
 
-            <!-- Video Upscaling -->
-            <section id="video-upscaling" class="feature-box hidden">
-                <h2>AI Video Upscaling</h2>
-                <p>Enhance video quality from low resolution to HD/4K.</p>
-                <input type="file" id="upscalingFile" accept="video/*">
-                <button class="btn-process" onclick="processVideoUpscaling()">Upscale</button>
-                <div id="upscalingPreview" class="preview-box">Preview will appear here.</div>
-            </section>
+        <!-- Text-to-Speech Video -->
+        <section id="text-to-speech-video" class="feature-box hidden">
+            <h2>AI Text-to-Speech Video</h2>
+            <p>Convert text into a voiceover and apply it to a video.</p>
+            <textarea id="textToSpeechVideoInput" placeholder="Enter text here..."></textarea>
+            <input type="file" id="textToSpeechVideoFile" accept="video/*">
+            <button class="btn-process" onclick="generateTextToSpeechVideo()">Generate Video</button>
+            <div id="textToSpeechVideoPreview" class="preview-box">Preview will appear here.</div>
+        </section>
 
-            <!-- Motion Tracking -->
-            <section id="motion-tracking" class="feature-box hidden">
-                <h2>AI Motion Tracking</h2>
-                <p>Track object movements in videos and apply effects.</p>
-                <input type="file" id="motionTrackingFile" accept="video/*">
-                <button class="btn-process" onclick="processMotionTracking()">Track Motion</button>
-                <div id="motionTrackingPreview" class="preview-box">Preview will appear here.</div>
-            </section>
+        <!-- Subscription Page -->
+        <section id="subscription" class="feature-box hidden">
+            <h2>Manage Subscription</h2>
+            <p>Upgrade, downgrade, or cancel your subscription here.</p>
+            <button class="btn-process">Manage Subscription</button>
+        </section>
 
-            <!-- Text to Video -->
-            <section id="text-to-video" class="feature-box hidden">
-                <h2>AI Text-to-Video</h2>
-                <p>Generate short video clips from text input.</p>
-                <textarea id="textToVideoInput" placeholder="Enter your text here..."></textarea>
-                <button class="btn-process" onclick="generateTextToVideo()">Generate Video</button>
-                <div id="textToVideoPreview" class="preview-box">Preview will appear here.</div>
-            </section>
-
-            <!-- Text to Speech -->
-            <section id="text-to-speech" class="feature-box hidden">
-                <h2>AI Text-to-Speech (TTS)</h2>
-                <p>Convert text into realistic AI voiceovers.</p>
-                <textarea id="textToSpeechInput" placeholder="Enter your text here..."></textarea>
-                <button class="btn-process" onclick="generateTextToSpeech()">Generate Voiceover</button>
-                <audio id="textToSpeechPreview" controls hidden></audio>
-            </section>
-
-            <!-- Cartoon Filters -->
-            <section id="cartoon-filters" class="feature-box hidden">
-                <h2>AI Cartoon & Anime Filters</h2>
-                <p>Apply cartoon, anime, or artistic styles to your videos.</p>
-                <input type="file" id="cartoonFilterFile" accept="video/*">
-                <button class="btn-process" onclick="applyCartoonFilter()">Apply Filter</button>
-                <div id="cartoonFilterPreview" class="preview-box">Preview will appear here.</div>
-            </section>
-
-            <!-- Motion Detector -->
-            <section id="motion-detector" class="feature-box hidden">
-                <h2>AI Motion Detector & Character Simulation</h2>
-                <p>Apply your movements to a cartoon or AI-generated character.</p>
-                <input type="file" id="motionDetectorFile" accept="video/*">
-                <button class="btn-process" onclick="simulateMotion()">Simulate</button>
-                <div id="motionDetectorPreview" class="preview-box">Preview will appear here.</div>
-            </section>
-
-            <!-- Character Generation -->
-            <section id="character-generation" class="feature-box hidden">
-                <h2>AI Character Generation</h2>
-                <p>Upload photos and describe actions to create realistic animations.</p>
-                <input type="file" id="characterFile" accept="image/*">
-                <textarea id="characterAction" placeholder="Describe the action (e.g., 'fighting a lion')"></textarea>
-                <button class="btn-process" onclick="generateCharacter()">Generate Character</button>
-                <div id="characterPreview" class="preview-box">Preview will appear here.</div>
-            </section>
+        <!-- Support Page -->
+        <section id="support" class="feature-box hidden">
+            <h2>Customer Support</h2>
+            <p>Need help? Contact our support team.</p>
+            <button class="btn-process">Contact Support</button>
         </section>
     </main>
 </body>
