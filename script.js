@@ -35,6 +35,11 @@ function generateTextToSpeechVideo() {
     }, 2000);
 }
 
+// Multi-Language Switcher
+document.getElementById("language-select").addEventListener("change", function () {
+    alert(`Language switched to: ${this.value}`);
+});
+
 // Mock: Generate Character Animation
 function generateCharacter() {
     const file = document.getElementById("characterFile").files[0];
