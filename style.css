@@ -95,6 +95,7 @@ main {
     flex: 1;
 }
 
+/* Hero Section */
 .hero {
     text-align: center;
     background: linear-gradient(135deg, #1e1e2f, #302b63);
@@ -141,37 +142,59 @@ main {
     background: #5a33a8;
 }
 
-/* Tools Section */
-.tools-section {
-    margin-top: 40px;
-}
-
-.tool-card {
-    display: inline-block;
-    margin: 10px;
-    background: #2c2c2c;
+/* Features Section */
+.feature-box {
+    background: #1a1a1a;
+    padding: 20px;
+    margin: 20px auto;
     border-radius: 8px;
-    overflow: hidden;
+    width: 90%;
+    max-width: 600px;
     text-align: center;
-    width: 300px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-.tool-card img {
+.feature-box.hidden {
+    display: none;
+}
+
+textarea,
+input[type="file"] {
     width: 100%;
-    height: 200px;
-    object-fit: cover;
+    max-width: 500px;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 4px;
+    border: none;
+    background: #2c2c2c;
+    color: white;
 }
 
-.tool-btn {
+textarea::placeholder,
+input::placeholder {
+    color: #b0b0b0;
+}
+
+.btn-process {
+    padding: 12px 20px;
     background: #6f42c1;
     color: white;
     border: none;
-    padding: 10px;
-    width: 100%;
+    border-radius: 4px;
     cursor: pointer;
     transition: 0.3s;
 }
 
-.tool-btn:hover {
+.btn-process:hover {
     background: #5a33a8;
+}
+
+.preview-box {
+    border: 1px solid #ccc;
+    padding: 20px;
+    min-height: 200px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    color: #fff;
+    margin-top: 20px;
 }
