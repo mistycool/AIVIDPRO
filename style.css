@@ -4,14 +4,14 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    background: #0f0f0f; /* Black background */
+    background: #121212; /* Black background */
     color: #fff;
 }
 
 /* Sidebar Navigation */
 .sidebar {
     width: 260px;
-    background: #141414; /* Sidebar dark black */
+    background: #181818; /* Sidebar dark black */
     color: white;
     display: flex;
     flex-direction: column;
@@ -23,7 +23,7 @@ body {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, #1e1e2f, #302b63); /* Overlay with gradient */
+    background: linear-gradient(135deg, #202020, #28293e); /* Gradient matching provided screenshot */
     border-radius: 8px;
     margin: 20px;
     padding: 40px;
@@ -34,7 +34,7 @@ body {
 }
 
 .hero-overlay {
-    background: rgba(0, 0, 0, 0.6); /* Semi-transparent overlay */
+    background: rgba(0, 0, 0, 0.75); /* Semi-transparent overlay */
     padding: 20px;
     border-radius: 8px;
 }
@@ -88,7 +88,7 @@ body {
 }
 
 .tool-card {
-    background: #282842;
+    background: #202020;
     padding: 20px;
     border-radius: 8px;
     width: 300px;
