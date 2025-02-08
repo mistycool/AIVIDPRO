@@ -1,85 +1,84 @@
-/* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Inter', sans-serif;
     margin: 0;
     padding: 0;
     display: flex;
-    background: linear-gradient(to right, #1e1e2f, #302b63, #0f0c29);
+    background: #551a3b; /* Darker rose background */
     color: #fff;
-    min-height: 100vh; /* Ensure full height */
+    min-height: 100vh;
 }
 
-/* Sidebar Navigation */
 .sidebar {
-    width: 250px;
-    background: linear-gradient(to bottom, #0f0c29, #302b63); /* Gradient background */
+    width: 260px;
+    background: #6e2a4a; /* Darker rose shade for sidebar */
     color: white;
     display: flex;
     flex-direction: column;
     padding-top: 20px;
-    border-right: 2px solid rgba(255, 255, 255, 0.2);
-    height: 100vh; /* Full height of the page */
-    position: fixed; /* Sidebar stays fixed on the left */
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    height: 100vh;
+    position: fixed;
     left: 0;
 }
 
 .sidebar ul {
     list-style: none;
-    margin: 0;
     padding: 0;
 }
 
 .sidebar .menu-item {
-    padding: 15px 20px; /* Added padding to avoid text overflow */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 20px;
     font-size: 16px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     cursor: pointer;
     text-align: left;
     transition: 0.3s;
-    color: #fff;
+    color: #b0b0b0;
 }
 
 .sidebar .menu-item:hover {
-    background: #ff1493; /* Dark pink hover */
-    color: white;
-    border-left: 4px solid white; /* Small highlight effect */
+    background: #823154; /* Hover color for sidebar */
+    color: #fff;
 }
 
-/* Main Content */
 main {
-    margin-left: 250px; /* Leave space for the sidebar */
+    margin-left: 260px;
     padding: 20px;
     flex: 1;
-    overflow-y: auto; /* Scrollable content */
+    overflow-y: auto;
 }
 
-/* Header */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgba(0, 0, 0, 0.5);
+    background: #6e2a4a; /* Match sidebar color */
     padding: 20px;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
     position: sticky;
     top: 0;
+    z-index: 1000;
 }
 
-/* Hero Section */
+header .logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+}
+
 .hero {
     text-align: center;
-    padding: 100px 20px;
-    background: linear-gradient(135deg, #302b63, #0f0c29);
-    color: white;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-    margin-top: 20px;
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #823154, #551a3b); /* Gradient in rose tones */
+    border-radius: 8px;
+    margin: 20px 0;
 }
 
 .hero h1 {
-    font-size: 48px;
+    font-size: 36px;
     margin-bottom: 20px;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 .hero p {
@@ -89,8 +88,8 @@ header {
 }
 
 .hero .btn {
-    background: #ff1493;
-    padding: 15px 20px;
+    background: #a83e66; /* Rose accent */
+    padding: 15px 25px;
     border-radius: 5px;
     color: white;
     text-decoration: none;
@@ -99,33 +98,12 @@ header {
 }
 
 .hero .btn:hover {
-    background: #ff0066;
+    background: #c14d77; /* Lighter rose hover */
 }
 
-/* Features Section */
-#features {
-    text-align: center;
-    padding: 50px 20px;
-}
-
-.feature-box {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    padding: 20px;
-    width: 90%;
-    max-width: 400px;
-    margin: 20px auto;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
-}
-
-/* Footer */
 footer {
     text-align: center;
     padding: 20px;
-    background: rgba(0, 0, 0, 0.5);
-    color: rgba(255, 255, 255, 0.8);
-    border-top: 2px solid rgba(255, 255, 255, 0.2);
-    position: sticky;
-    bottom: 0;
+    background: #6e2a4a; /* Match sidebar and header */
+    color: rgba(255, 255, 255, 0.6);
 }
