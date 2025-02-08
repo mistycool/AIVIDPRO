@@ -1,55 +1,104 @@
-/* General Styles */
-body {
-    font-family: 'Inter', sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    background: #121212; /* Matching black background */
-    color: #fff;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MistyCool AI Video Editor</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="logo-section">
+            <div class="logo">VideoCraft</div>
+            <button class="all-studios-btn">All Studios</button>
+        </div>
+        <ul class="menu-list">
+            <li class="menu-item active" onclick="showFeature('home')">
+                <span class="icon">🏠</span> Home
+            </li>
+            <li class="menu-item" onclick="showFeature('train-model')">
+                <span class="icon">⚙️</span> Train Model <span class="waitlist">Waitlist</span>
+            </li>
+            <li class="menu-header">Tools</li>
+            <li class="menu-item" onclick="showFeature('background-removal')">
+                <span class="icon">🖼️</span> Background Removal
+            </li>
+            <li class="menu-item" onclick="showFeature('video-upscaling')">
+                <span class="icon">🎥</span> Video Upscaling
+            </li>
+            <li class="menu-item" onclick="showFeature('motion-tracking')">
+                <span class="icon">🎯</span> Motion Tracking
+            </li>
+            <li class="menu-item" onclick="showFeature('text-to-video')">
+                <span class="icon">✍️</span> Text to Video
+            </li>
+            <li class="menu-item" onclick="showFeature('text-to-speech-video')">
+                <span class="icon">🔊</span> Text to Speech Video
+            </li>
+            <li class="menu-item" onclick="showFeature('cartoon-filters')">
+                <span class="icon">🎨</span> Cartoon & Anime Filters
+            </li>
+            <li class="menu-item" onclick="showFeature('motion-detector')">
+                <span class="icon">🤖</span> Motion Detector
+            </li>
+            <li class="menu-item" onclick="showFeature('character-generation')">
+                <span class="icon">👤</span> Character Generation
+            </li>
+            <li class="menu-header">Subscription & Billing</li>
+            <li class="menu-item" onclick="showFeature('subscription')">
+                <span class="icon">💳</span> Manage Subscription
+            </li>
+            <li class="menu-item" onclick="showFeature('support')">
+                <span class="icon">📞</span> Customer Support
+            </li>
+        </ul>
+    </aside>
 
-/* Sidebar */
-.sidebar {
-    width: 260px;
-    background: #1a1a1a;
-    height: 100vh;
-    padding: 20px;
-    position: fixed;
-    left: 0;
-    top: 0;
-    display: flex;
-    flex-direction: column;
-    color: white;
-}
+    <!-- Main Content -->
+    <main>
+        <!-- Header -->
+        <header class="header">
+            <div class="language-switcher">
+                <select id="language-select">
+                    <option value="en">English</option>
+                    <option value="fr">Français</option>
+                    <option value="es">Español</option>
+                    <option value="ru">Русский</option>
+                    <option value="sl">Slovenščina</option>
+                </select>
+            </div>
+            <div class="auth-links">
+                <a href="#" class="btn-auth">Log In</a>
+                <a href="#" class="btn-auth">Sign Up</a>
+            </div>
+        </header>
 
-/* Hero Section */
-.hero {
-    margin-left: 260px;
-    margin-top: 20px;
-    background: linear-gradient(135deg, #1e1e2f, #2e2f4f);
-    padding: 40px;
-    border-radius: 10px;
-    color: white;
-    text-align: center;
-}
-
-.hero-overlay {
-    background: rgba(0, 0, 0, 0.7);
-    padding: 20px;
-    border-radius: 10px;
-}
-
-.prompt-bar input {
-    padding: 12px;
-    width: 60%;
-    background: #2a2a42;
-    color: #fff;
-    border-radius: 5px;
-}
-
-.prompt-bar button {
-    padding: 12px 24px;
-    background: #6f42c1;
-    color: white;
-    border-radius: 5px;
-}
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-overlay">
+                <h1 class="hero-title">Describe Your Ideas and Generate</h1>
+                <p class="hero-subtitle">Transform your words into visual masterpieces. Leverage AI technology to craft breathtaking videos.</p>
+                <div class="prompt-bar">
+                    <input type="text" placeholder="Write a prompt to generate">
+                    <button class="btn-generate">Generate</button>
+                </div>
+            </div>
+            <div class="video-tools">
+                <div class="tool-card">
+                    <h3>Text to Video</h3>
+                    <p>Create stunning videos from your text descriptions.</p>
+                    <button class="btn-tool">Generate</button>
+                </div>
+                <div class="tool-card">
+                    <h3>Image to Video</h3>
+                    <p>Transform images into engaging video stories.</p>
+                    <button class="btn-tool">Generate</button>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
