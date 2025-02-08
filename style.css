@@ -4,119 +4,52 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    background: #121212; /* Black background */
+    background: #121212; /* Matching black background */
     color: #fff;
 }
 
-/* Sidebar Navigation */
+/* Sidebar */
 .sidebar {
     width: 260px;
-    background: #181818; /* Sidebar dark black */
-    color: white;
-    display: flex;
-    flex-direction: column;
+    background: #1a1a1a;
     height: 100vh;
+    padding: 20px;
     position: fixed;
     left: 0;
-    padding: 20px;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    color: white;
 }
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, #202020, #28293e); /* Gradient matching provided screenshot */
-    border-radius: 8px;
-    margin: 20px;
+    margin-left: 260px;
+    margin-top: 20px;
+    background: linear-gradient(135deg, #1e1e2f, #2e2f4f);
     padding: 40px;
-    text-align: center;
+    border-radius: 10px;
     color: white;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-    position: relative;
+    text-align: center;
 }
 
 .hero-overlay {
-    background: rgba(0, 0, 0, 0.75); /* Semi-transparent overlay */
+    background: rgba(0, 0, 0, 0.7);
     padding: 20px;
-    border-radius: 8px;
-}
-
-.hero-title {
-    font-size: 36px;
-    margin-bottom: 10px;
-}
-
-.hero-subtitle {
-    font-size: 18px;
-    margin-bottom: 20px;
-}
-
-.prompt-bar {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 20px;
+    border-radius: 10px;
 }
 
 .prompt-bar input {
-    width: 60%;
     padding: 12px;
-    border-radius: 4px;
-    border: none;
-    background: #282842;
-    color: white;
+    width: 60%;
+    background: #2a2a42;
+    color: #fff;
+    border-radius: 5px;
 }
 
-.prompt-bar .btn-generate {
+.prompt-bar button {
     padding: 12px 24px;
     background: #6f42c1;
     color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.prompt-bar .btn-generate:hover {
-    background: #5a33a8;
-}
-
-/* Tool Cards */
-.video-tools {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 30px;
-}
-
-.tool-card {
-    background: #202020;
-    padding: 20px;
-    border-radius: 8px;
-    width: 300px;
-    text-align: center;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-}
-
-.tool-card h3 {
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-
-.tool-card p {
-    font-size: 14px;
-    margin-bottom: 20px;
-    color: #bbb;
-}
-
-.tool-card .btn-tool {
-    padding: 10px 20px;
-    background: #6f42c1;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.tool-card .btn-tool:hover {
-    background: #5a33a8;
+    border-radius: 5px;
 }
