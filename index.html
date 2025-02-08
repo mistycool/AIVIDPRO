@@ -16,49 +16,25 @@
             <button class="all-studios-btn">All Studios</button>
         </div>
         <ul class="menu-list">
-            <li class="menu-item active" onclick="navigateTo('home')">
-                <span class="icon">🏠</span> Home
-            </li>
-            <li class="menu-item" onclick="navigateTo('train-model')">
-                <span class="icon">⚙️</span> Train Model <span class="waitlist">Waitlist</span>
-            </li>
+            <li class="menu-item active" onclick="navigateTo('home')">🏠 Home</li>
+            <li class="menu-item" onclick="navigateTo('train-model')">⚙️ Train Model <span class="waitlist">Waitlist</span></li>
             <li class="menu-header">Tools</li>
-            <li class="menu-item" onclick="navigateTo('background-removal')">
-                <span class="icon">🖼️</span> Background Removal
-            </li>
-            <li class="menu-item" onclick="navigateTo('video-upscaling')">
-                <span class="icon">🎥</span> Video Upscaling
-            </li>
-            <li class="menu-item" onclick="navigateTo('motion-tracking')">
-                <span class="icon">🎯</span> Motion Tracking
-            </li>
-            <li class="menu-item" onclick="navigateTo('text-to-video')">
-                <span class="icon">✍️</span> Text to Video
-            </li>
-            <li class="menu-item" onclick="navigateTo('text-to-speech-video')">
-                <span class="icon">🔊</span> Text to Speech Video
-            </li>
-            <li class="menu-item" onclick="navigateTo('cartoon-filters')">
-                <span class="icon">🎨</span> Cartoon & Anime Filters
-            </li>
-            <li class="menu-item" onclick="navigateTo('motion-detector')">
-                <span class="icon">🤖</span> Motion Detector
-            </li>
-            <li class="menu-item" onclick="navigateTo('character-generation')">
-                <span class="icon">👤</span> Character Generation
-            </li>
+            <li class="menu-item" onclick="navigateTo('background-removal')">🖼️ Background Removal</li>
+            <li class="menu-item" onclick="navigateTo('video-upscaling')">🎥 Video Upscaling</li>
+            <li class="menu-item" onclick="navigateTo('motion-tracking')">🎯 Motion Tracking</li>
+            <li class="menu-item" onclick="navigateTo('text-to-video')">✍️ Text to Video</li>
+            <li class="menu-item" onclick="navigateTo('text-to-speech-video')">🔊 Text to Speech Video</li>
+            <li class="menu-item" onclick="navigateTo('cartoon-filters')">🎨 Cartoon & Anime Filters</li>
+            <li class="menu-item" onclick="navigateTo('motion-detector')">🤖 Motion Detector</li>
+            <li class="menu-item" onclick="navigateTo('character-generation')">👤 Character Generation</li>
             <li class="menu-header">Subscription & Billing</li>
-            <li class="menu-item" onclick="navigateTo('subscription')">
-                <span class="icon">💳</span> Manage Subscription
-            </li>
-            <li class="menu-item" onclick="navigateTo('support')">
-                <span class="icon">📞</span> Customer Support
-            </li>
+            <li class="menu-item" onclick="navigateTo('subscription')">💳 Manage Subscription</li>
+            <li class="menu-item" onclick="navigateTo('support')">📞 Customer Support</li>
         </ul>
     </aside>
 
     <!-- Main Content -->
-    <main>
+    <main id="main-content">
         <!-- Header -->
         <header class="header">
             <div class="language-switcher">
@@ -76,11 +52,11 @@
             </div>
         </header>
 
-        <!-- Hero Section -->
-        <section id="home" class="hero">
-            <div class="hero-overlay">
-                <h1 class="hero-title">Describe Your Ideas and Generate</h1>
-                <p class="hero-subtitle">Transform your words into visual masterpieces. Leverage AI technology to craft breathtaking videos.</p>
+        <!-- Default Content (Home) -->
+        <section id="home" class="page active">
+            <div class="hero">
+                <h1>Describe Your Ideas and Generate</h1>
+                <p>Transform your words into visual masterpieces. Leverage AI technology to craft breathtaking videos.</p>
                 <div class="prompt-bar">
                     <input type="text" placeholder="Write a prompt to generate">
                     <button class="btn-generate">Generate</button>
@@ -99,6 +75,18 @@
                 </div>
             </div>
         </section>
+
+        <!-- Placeholder for other pages -->
+        <section id="background-removal" class="page">Background Removal Page</section>
+        <section id="video-upscaling" class="page">Video Upscaling Page</section>
+        <section id="motion-tracking" class="page">Motion Tracking Page</section>
+        <section id="text-to-video" class="page">Text to Video Page</section>
+        <section id="text-to-speech-video" class="page">Text to Speech Video Page</section>
+        <section id="cartoon-filters" class="page">Cartoon & Anime Filters Page</section>
+        <section id="motion-detector" class="page">Motion Detector Page</section>
+        <section id="character-generation" class="page">Character Generation Page</section>
+        <section id="subscription" class="page">Manage Subscription Page</section>
+        <section id="support" class="page">Customer Support Page</section>
     </main>
 </body>
 </html>
